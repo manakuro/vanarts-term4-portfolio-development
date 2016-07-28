@@ -1,0 +1,542 @@
+/* --------------------------
+        MODULES
+----------------------------*/
+@mixin page-header-input-style {
+    height: 2.5rem;
+    padding: .5rem;
+}
+
+@mixin hover($ele, $child: '') {
+    @if $child == '' {
+        transition: #{$ele} .25s;
+
+        &:hover {
+            #{$ele}: $main-colour;
+        }
+
+    } @else {
+        #{$child} {
+            transition: #{$ele} .25s;
+        }
+
+        &:hover #{$child} {
+            #{$ele}: $main-colour;
+        }
+    }
+
+}
+
+@mixin focus-input {
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin btn-style($width) {
+    display: block;
+    padding: .5em;
+    font-family: $heading-font;
+    font-weight: 500;
+    font-size: 1em;
+    color: $white;
+    background-color: $main-colour;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: $width;
+
+    transition: border-color .5s;
+}
+
+/* --------------------------
+        SECTION
+----------------------------*/
+.sec {
+    margin: 4rem 0 4rem 0;
+
+    // Tablet
+    // @include respond-to(m) {
+    //     padding: 4rem 0 4rem 0;
+    // }
+
+    // Desktop XL
+    // @include respond-to(xl) {
+    //     padding: 6rem 0;
+    // }
+
+}
+
+.sec-heading-wrapper {
+    position: relative;
+    background: $main-bg;
+
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 1rem;
+        background: $main-colour;
+    }
+
+}
+
+/*-- Heading styling for each sections --*/
+.sec-heading {
+    @include btn-style(10rem);
+    font-size: 1.3rem;
+}
+
+// Headline style for top image
+.sec-top-img-headline {
+    @include btn-style(100%);
+
+    font-size: 1.5rem;
+    padding: .3rem;
+    text-transform: none;
+    text-align: center;
+
+}
+
+/*-- Button styling for tags --*/
+.tag {
+    display: inline-block;
+    margin: 0 .5rem;
+    padding: 0 1rem;
+    font-family: $heading-font;
+    font-weight: 500;
+    font-size: .8rem;
+    color: $black;
+    background-color: $tag-colour;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*-- Styling for archive list --*/
+.sec-list {
+    margin-top: 2rem;
+
+    @include hover(color, '.sec-news-link');
+
+    .sec-news-link {
+        color: $black;
+    }
+}
+
+.sec-list-headline-wrapper {
+    position: relative;
+    padding: 1rem;
+    background: $white;
+
+}
+
+.sec-list-headline {
+    font-family: $heading-font;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sec-list-bottom {
+    position: absolute;
+    bottom: 10%;
+}
+
+.sec-list-date {
+    font-family: $heading-font;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: $light-grey;
+}
+
+/* --------------------------
+        SOCIAL MEDIA
+----------------------------*/
+.social {
+    text-align: right;
+
+    li {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    .social-link {
+        color: $black;
+        font-size: 0;
+
+        .fa {
+            font-size: 1.5rem;
+        }
+
+        @include hover(color);
+    }
+}
+
+.social-media-outer {
+    position: relative;
+
+    &:hover .social-wrapper {
+        opacity: 1;
+    }
+
+    .social-link {
+        color: $white;
+    }
+}
+
+.social-wrapper {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+            transition: all .25s;
+}
+
+/* --------------------------
+        NEWSLETTER FORM
+----------------------------*/
+.newsletter-form {
+
+    position: relative;
+    font-family: $heading-font;
+
+    .newsletter-input {
+        width: 65%;
+        font-size: .7rem;
+        @include page-header-input-style();
+        @include focus-input();
+
+        &::-webkit-input-placeholder {
+            text-transform: uppercase;
+        } 
+    }
+
+    .newsletter-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 2.5rem;
+        width: 5rem;
+    }
+
+}
+
+/*-- Form --*/
+.input-wrapper {
+    margin: 1em 0;
+    padding: 1em 0;
+}
+
+.input {
+    width: 100%;
+    height: 2rem;
+    border: 2px solid #EEE9E9;
+    font-size: 1rem;
+    transition: border-color .5s;
+
+// &:hover {
+//     border-color: $main-colour;
+// }
+
+}
+
+%input-label {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    vertical-align: baseline;
+
+    &:after {
+        content: ": ";
+        font-size: 1rem;
+        padding: 0 .5rem;
+    }
+}
+
+
+
+
+
+
+
+/* select */
+// .select {
+//     border: 2px solid #EEE9E9;
+//     border-radius: 5px;
+// }
+
+/* label */
+// .label-span {
+//     font-size: 2em;
+//     font-weight: 500;
+//     display: block;
+//     margin: 5px;
+//     text-align: left;
+
+// }
+
+// textarea
+.textarea {
+    height: 9rem;
+}
+
+// button
+.btn {
+    @include btn-style(10rem);
+}   
+
+// form for inline layout
+.form-inline {
+    display: flex;
+    align-items: flex-end;
+}
+
+.input-wrapper-inline {
+    margin-right: 1rem;
+    flex-grow: 1;
+
+    &.no-grow {
+        flex-grow: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+    
+}
+
+.input-label {
+    @extend  %input-label;
+    display: block;
+    font-size: .7rem;
+}
+
+%input {
+    width: 100%;
+    background: $white;
+    font-family: $heading-font;
+}
+
+.input-date-wrapper {
+    position: relative;
+}
+
+.input-date {
+    @extend %input;
+    padding: .5rem .2rem .5rem 2rem;
+}
+
+.input-date-icon {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    margin-top: -8px;
+}
+
+.input-select {
+    @extend %input;
+    border: 0;
+    border-radius: 0;
+    padding: .5rem 1rem;
+
+    text-transform: uppercase;
+
+}
+
+.input-search {
+    @extend %input;
+    padding: .5rem;
+}
+
+
+/*-- Layout --*/
+.hidden {
+    display: none !important;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/*-- Icon Animation --*/
+.icon-btn {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+
+    svg {
+        left: 0;
+    }
+}
+
+
+// Pagination
+.pagination-wrapper {
+    margin: 2rem 0;
+    display: flex;
+
+    .page-hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.pagination {
+    flex-grow: 3;
+    padding: .5rem;
+    text-align: center;
+
+    font-family: $heading-font;
+    text-transform: uppercase;
+
+    .page-item {
+        display: inline-block;
+        margin: 0 .5rem;
+
+        -webkit-transition: all .25s;
+                transition: all .25s;
+
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid $main-colour;
+        }
+
+        &:hover > .input-page {
+            color: $main-colour;
+        }
+
+        &.page-current {
+            .input-page {
+                color: $main-colour;
+            }
+        }
+
+    }
+
+    .input-page {
+        padding: .2rem;
+    }
+
+}
+
+/* --------------------------
+    AUDIO & VIDEO
+----------------------------*/
+@mixin playing-style($width: .1em) {
+    background: $main-colour;
+    border: $width solid $main-colour;
+}
+
+@mixin play-icon-wrapper($icon) {
+    position: relative;
+    padding: 0;
+
+    &:hover #{$icon} {
+        @include playing-style(.1em);
+    }
+
+    img {
+        // -webkit-transition: opacity .25s;
+        //         transition: opacity .25s;
+    }
+
+    &:hover img {
+        opacity: .8;
+    }
+
+    // while playing 
+    &.playing {
+
+        #{$icon} {
+            @include playing-style(.1em);
+        }
+
+        img {
+            opacity: .8;
+        }
+
+    }
+
+}
+
+%play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.5rem;
+    color: $white;
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+    border-radius: 100%;
+    border: .1em solid $white;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(43,51,63,.7);
+
+    -webkit-transition: background .25s, border .25s;
+            transition: background .25s, border .25s;
+
+    // button style while playing
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -7px;
+        margin-top: -12px;
+    }
+
+    // button style while pausing
+    &.fa-pause:before {
+        margin-left: -10px;
+        margin-top: -12px;   
+    }
+}
+
+
+/* --------------------------
+    OTHERS
+----------------------------*/
+.holizontal-divider {
+    width: 100%;
+    height: 1px;
+    background: $black;
+    margin: 2rem 0;
+}

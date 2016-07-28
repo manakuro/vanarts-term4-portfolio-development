@@ -1,0 +1,124 @@
+*,*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    &:focus {
+        outline: 0;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    resize: vertical;
+
+    &:focus {
+        outline: none;
+    }
+    
+}
+
+button {
+    border: none;
+    background: none;
+    user-select: none;
+    outline: none;
+    tap-highlight-color: rgba(0,0,0,0);
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*---------------------------
+    Fonts
+---------------------------*/
+$base-font-size: 62.5%;
+html {
+    font-family: $body-font;
+    font-size: $base-font-size;
+    line-height: 1.5;
+    background: $main-bg;
+
+    // Tablet
+    // @include respond-to(m) {
+    //     font-size: 100%;
+    // }
+
+    // Desktop
+    @include respond-to(l) {
+        font-size: 100%;
+    }
+
+}

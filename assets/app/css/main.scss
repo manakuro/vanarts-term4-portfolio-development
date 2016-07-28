@@ -1,0 +1,228 @@
+ /*--------------------------
+        BASE
+----------------------------*/
+@import 'partials/_config.scss';
+@import 'partials/_base.scss';
+@import 'partials/module.scss';
+
+/* --------------------------
+        LAYOUT
+----------------------------*/
+// Modules will scale with document
+.page-header {
+    font-size: 1rem;
+}
+
+.hero-area {
+    font-size: 1rem;
+}
+
+.form {
+    font-size: 1rem;
+
+    // Desktop L
+    // @include respond-to(l) {
+    //     font-size: .8rem;
+    // }
+
+}
+
+/* --------------------------
+        HEADER
+----------------------------*/
+// Common Setting
+$page-header-top-space: 2rem;
+$nav-inner-space: 1rem;
+.page-header {
+
+    font-family: $heading-font;
+
+    // Social Section
+    .social {
+        @extend .social;
+    }
+
+    // Newsletter Form
+    .newsletter-form-header {
+        @extend .newsletter-form;
+    }
+
+    // Navigation Menu
+    .nav-wrapper {
+        background: $black;
+    }
+
+    .nav-wrapper {
+        margin-top: 1rem;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-item {
+        flex: 1 1 auto;
+
+        a {
+            display: block;
+            padding: $nav-inner-space;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+
+            @include hover(background);
+        }
+
+    }
+
+    .parent-list {
+        position: relative;
+
+        &:hover > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .sub-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-width: 10rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: $black;
+        z-index: 999;
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition: all .25s;
+
+        .nav-item {
+            border-bottom: 1px solid $white;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        a {
+            text-align: left;
+            padding: .5rem;
+        }
+
+    }
+
+    .nav-indicator {
+        position: absolute;
+        color: $white;
+        font-size: 1rem;
+        right: 5%;
+        top: 50%;
+        margin-top: -.5rem;
+    }
+
+    // Search Bar
+    .page-header-searchbar {
+        position: relative;
+        margin-top: $nav-inner-space;
+    }
+
+    .search-input {
+        width: 100%;
+        border-bottom: 1px solid $white;
+        background: none;
+
+        color: $white;
+        @include focus-input();
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1rem;
+        color: $white;
+    }
+
+}
+
+
+
+/*---------------------------
+    FOOTER SECTION
+---------------------------*/
+.page-footer {
+    padding: 2rem;
+    background: $black;
+    position: relative;
+
+}
+
+
+/* --------------------------
+        STATES
+----------------------------*/
+
+
+
+
+
+/*---------------------------
+    ANIMATION
+---------------------------*/
+@import 'partials/_animation.scss';
+
+/* --------------------------
+    Print
+----------------------------*/
+@import 'partials/_print.scss';
+
+
+
+// // audio
+// .audio-wrapper {
+//     margin-top: .5rem;
+// }
+
+// .audiojs {
+//     width: 100%;
+//     height: 2.3rem;
+//     background: none;
+//     background-image: none;
+//     font-size: .8rem;
+//     font-family: $heading-font;
+//     box-shadow: none;
+
+//     .play-pause {
+//         display: none;
+//     }
+
+//     .scrubber {
+//         border: none;
+//         background-color: $ex-light-grey;
+//     }
+
+//     .time {
+//         border: none;
+//         color: $black;
+//         text-shadow: none;
+
+//         em {
+//             color: $black;
+//             text-shadow: none;
+//         }
+
+//     }
+
+//     .played {
+//         border: none;
+//         color: $black;
+//         text-shadow: none;
+//     }
+
+// }
+
+

@@ -1,0 +1,62 @@
+@-webkit-keyframes loader {
+    50% {
+        opacity: .3;
+        transform: scale(.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes loader {
+    50% {
+        opacity: .3;
+        transform: scale(.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+}
+
+/* Scroll Animation */
+.scroll-list-hide {
+    visibility: hidden;
+}
+
+.fade-in {
+    animation: fade-in 1s;
+    animation-fill-mode: both;
+
+    visibility: visible;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% { 
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}

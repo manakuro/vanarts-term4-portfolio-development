@@ -8,6 +8,7 @@ Autoloader::register();
 
 // define curernt page
 define('CURRENT_PAGE', pathinfo($_SERVER['REQUEST_URI'], PATHINFO_FILENAME));
+define('IS_HOME', basename($_SERVER["PHP_SELF"]) === 'index.php');
 
 // define host url
 $url  = empty($_SERVER["HTTPS"]) ? "http://" : "https://";

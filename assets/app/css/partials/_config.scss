@@ -1,7 +1,7 @@
 /*---------------------------
     Color Theme
 ---------------------------*/
-// basic colour
+// basic colours
 $white: #fff;
 $black: #252525;
 $light-black: rgb(191, 189, 189);
@@ -14,20 +14,22 @@ $pink: rgba(255,192,203, 1);
 $light-blue: #0099ff;
 
 // background colour
-$main-bg: #ebebeb;
+$main-bg: #fff;
 
 // primary colour
 $main-colour: #e51228;
 $tag-colour: #ffff00;
 
+// 
 $error: #FF0000;
 
 
 /*---------------------------
     Fonts
 ---------------------------*/
+@import '_fonts.scss';
 $body-font: 'Roboto', 'Lato';
-$heading-font: 'Oswald', Calibri;
+$heading-font: 'Kelson';
 
 /*---------------------------
     MEDIA QUERY

@@ -32,6 +32,7 @@
     }
 }
 
+// button style
 @mixin btn-style($width) {
     display: block;
     padding: .5em;
@@ -155,11 +156,14 @@
         SOCIAL MEDIA
 ----------------------------*/
 .social {
-    text-align: right;
 
     li {
         display: inline-block;
         margin-left: 1rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
     }
 
     .social-link {
@@ -199,34 +203,8 @@
 }
 
 /* --------------------------
-        NEWSLETTER FORM
+    FORM
 ----------------------------*/
-.newsletter-form {
-
-    position: relative;
-    font-family: $heading-font;
-
-    .newsletter-input {
-        width: 65%;
-        font-size: .7rem;
-        @include page-header-input-style();
-        @include focus-input();
-
-        &::-webkit-input-placeholder {
-            text-transform: uppercase;
-        } 
-    }
-
-    .newsletter-btn {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 2.5rem;
-        width: 5rem;
-    }
-
-}
-
 /*-- Form --*/
 .input-wrapper {
     margin: 1em 0;
@@ -257,28 +235,6 @@
         padding: 0 .5rem;
     }
 }
-
-
-
-
-
-
-
-/* select */
-// .select {
-//     border: 2px solid #EEE9E9;
-//     border-radius: 5px;
-// }
-
-/* label */
-// .label-span {
-//     font-size: 2em;
-//     font-weight: 500;
-//     display: block;
-//     margin: 5px;
-//     text-align: left;
-
-// }
 
 // textarea
 .textarea {
@@ -353,8 +309,9 @@
     padding: .5rem;
 }
 
-
-/*-- Layout --*/
+/* --------------------------
+    Layout
+----------------------------*/
 .hidden {
     display: none !important;
 }
@@ -392,6 +349,10 @@
 
 .cf:after {
     clear: both;
+}
+
+.fr {
+    float: right;
 }
 
 /*-- Icon Animation --*/

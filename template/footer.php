@@ -1,9 +1,20 @@
 <?php 
-    use WWM\Utility;
+    $config = Config::get();
 ?>
 <footer class="page-footer">
     
-    <div class="row">
+    <div class="row row-center">
+
+            <div class="columns span-6">
+                
+                <a href="contact.php" class="btn btn-contact">Contact me</a>
+
+                <ul class="social">
+                    <?php echo Utility::getSocialLink($config['social_media']); ?>
+                </ul>
+
+            </div>
+
     </div>
 
 </footer>

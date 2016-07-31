@@ -3,7 +3,7 @@
 
     $config = Config::get();
 
-    session_start();
+    // session_start();
 
     // create navigation menu html
     $navHTML = Utility::getNav($config['nav']);
@@ -26,7 +26,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS -->
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,100italic,100' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,100italic,100|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="assets/dist/css/vendor.min.css">
         
@@ -59,5 +59,6 @@
         <?php else: ?>
 
         <?php endif; ?>
+       
 
         

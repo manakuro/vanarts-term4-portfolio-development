@@ -37,7 +37,14 @@
 @font-face {font-family: 'Kelson-Bold';src: url('../fonts/kelson/31B3FD_0_0.eot');src: url('../fonts/kelson/31B3FD_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/kelson/31B3FD_0_0.woff2') format('woff2'),url('../fonts/kelson/31B3FD_0_0.woff') format('woff'),url('../fonts/kelson/31B3FD_0_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'Kelson';src: url('../fonts/kelson/31B3FD_1_0.eot');src: url('../fonts/kelson/31B3FD_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/kelson/31B3FD_1_0.woff2') format('woff2'),url('../fonts/kelson/31B3FD_1_0.woff') format('woff'),url('../fonts/kelson/31B3FD_1_0.ttf') format('truetype');}
+@font-face {
+    font-family: 'Kelson';
+    src: url('../fonts/kelson/31B3FD_1_0.eot');
+    src: url('../fonts/kelson/31B3FD_1_0.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/kelson/31B3FD_1_0.woff2') format('woff2'),url('../fonts/kelson/31B3FD_1_0.woff') format('woff'),
+        url('../fonts/kelson/31B3FD_1_0.ttf') format('truetype');
+    font-style: normal;
+}
  
   
 @font-face {font-family: 'Kelson-Light';src: url('../fonts/kelson/31B3FD_2_0.eot');src: url('../fonts/kelson/31B3FD_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/kelson/31B3FD_2_0.woff2') format('woff2'),url('../fonts/kelson/31B3FD_2_0.woff') format('woff'),url('../fonts/kelson/31B3FD_2_0.ttf') format('truetype');}

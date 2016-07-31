@@ -1,5 +1,6 @@
 <?php 
     include 'template/header.php';
+    $homeWork = Config::get('home_work');
 ?>
     
     <div class="hero">
@@ -8,6 +9,8 @@
             <div class="pre-loader-left pre-loader-sec"></div>
             <div class="pre-loader-right pre-loader-sec"></div>
         </div>
+
+        <div id="particles-js" class="particles-container"></div>
         
         <div class="row row-center">
 
@@ -33,9 +36,39 @@
     
     <main class="page-main">
 
-        <div class="row">
+        <section class="sec home-work">
+            
+            <div class="row">
 
-        </div>
+                <?php foreach ($homeWork as $index => $val): ?>
+
+                <div class="columns span-l-12 home-work-li">
+                    
+                    <div class="row">
+                        
+                        <div class="columns span-l-4 <?php if ($index%2 !== 0) echo 'fr'; ?>">
+                            
+                            <h3 class="home-work-li-heading"><?php echo $val['name']?></h3>
+
+                            <p class="home-work-li-para"><?php echo $val['desc']?></p>
+
+                            <a href="#" class="btn btn-cta">View</a>
+
+                        </div>
+
+                        <div class="columns span-l-8">
+                            <img src="<?php echo $val['img']?>" alt="<?php echo $val['alt']?>">
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <?php endforeach; ?>
+
+            </div>
+
+        </section>
 
     </main><!-- /page-main -->
 

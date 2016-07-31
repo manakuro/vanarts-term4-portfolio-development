@@ -1,16 +1,27 @@
 <?php 
-    use WWM\Utility;
+    $config = Config::get();
 ?>
 <footer class="page-footer">
     
-    <div class="row">
+    <div class="row row-center">
+
+            <div class="columns span-6">
+                
+                <a href="contact.php" class="btn btn-contact">Contact me</a>
+
+                <ul class="social">
+                    <?php echo Utility::getSocialLink($config['social_media']); ?>
+                </ul>
+
+            </div>
+
     </div>
 
 </footer>
 
         <!-- Vendors -->    
         <!-- build:js assets/dist/js/vendor.min.js -->
-        <script src="../js/libs/modernizr-2.8.3.min.js"></script>
+        <script src="../js/vendors/modernizr-2.8.3.min.js"></script>
         <!-- endbuild -->
 
         <!-- JavaScript -->

@@ -33,13 +33,16 @@
     "jquery": "^2.2.0",
     "jquery-color": "^1.0.0",
     "lightslider": "^1.1.5",
+    "lodash": "^4.14.1",
     "lodash.assign": "^4.0.2",
     "mo-js": "^0.147.4",
+    "particles.js": "^2.0.0",
     "path": "^0.12.7",
     "run-sequence": "^1.1.5",
     "underscore": "^1.8.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
+    "vivus": "^0.3.1",
     "watchify": "^3.7.0"
   }
 }

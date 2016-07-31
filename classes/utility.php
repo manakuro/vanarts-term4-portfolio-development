@@ -46,7 +46,7 @@ class Utility {
         foreach($socialList as $val) {
             // if ($val['only_member'] && empty($_SESSION['auth'])) continue;
             
-            $html .= '<li class="social-item"><a href="'. $val['href'] .'" class="social-link"><i class="'. $val['class']  .'"></i>'. $val['name'] .'</a></li>';
+            $html .= '<li class="social-item"><a href="'. $val['href'] .'" class="social-link" target="_blank"><i class="'. $val['class']  .'"></i>'. $val['name'] .'</a></li>';
         }
 
         return $html;

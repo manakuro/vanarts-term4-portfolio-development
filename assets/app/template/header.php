@@ -3,18 +3,15 @@
 
     $config = Config::get();
 
-    session_start();
+    // session_start();
 
     // create navigation menu html
-    //$navHTML = Utility::getNav($config['nav']);
-
-    // create social media html
-    //$socialHTML = Utility::getSocialLink($config['social_media']);
+    $navHTML = Utility::getNav($config['nav']);
 
 ?>
 
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -46,11 +43,27 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- header -->
-        <header class="page-header">
+        <?php if (IS_HOME): ?>
+        <!-- header for home page -->
+        <header class="page-header-home">
+
+            <div class="row">
+
+                <div class="columns span-l-3 offset-l-9">
+                    
+                    <nav class="nav">
+                        <ul class="nav-menu"><?php echo $navHTML; ?></ul>
+                    </nav>
+
+                </div>
+
+            </div>
             
         </header>
-        <!-- /header -->
+        <!-- /header for home page -->
+        <?php else: ?>
+
+        <?php endif; ?>
        
 
         

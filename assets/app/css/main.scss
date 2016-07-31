@@ -43,6 +43,7 @@
     .nav-item a {
         padding: 0 1rem;
         font-weight: 500;
+        font-family: $heading-font;
         text-transform: uppercase;
     }
 
@@ -58,7 +59,7 @@
     top: 0;
     width: 51%;
     height: 100%;
-    background: #ff6666;
+    background: $main-colour;
     z-index: 99999;
 
     transform: translateX(0);
@@ -73,21 +74,26 @@
     }
 }
 
+.particles-container {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    opacity: 0;
+
+    transition: opacity .25s;
+}
+
 /*---------------------------
     HERO SECTION
 ---------------------------*/
 .hero {
     min-height: 100vh;
     
-    // position: absolute;
-    // width: 100%;
-    // height: 100%;
-    // background: #ff6666;
-    // left: 0;
-    // top: 0;
-
     .hero-inner {
-        margin-top: 15rem;
+        margin-top: 12rem;
         position: relative;
         z-index: 999999;
     }
@@ -132,6 +138,10 @@
                 stroke: $black;
             }
         }
+
+        .particles-container {
+            opacity: 1;
+        }
     }
 
     // when svg animation finish
@@ -160,12 +170,56 @@
 }
 
 /*---------------------------
+    HOME WORK SECTION
+---------------------------*/
+.home-work {
+
+    .home-work-li {
+        margin-bottom: 10rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .home-work-li-heading {
+        font-size: 1.5em;
+        font-family: $heading-font;
+        text-transform: uppercase;
+    }
+
+    .home-work-li-para {
+        font-size: 1em;
+        margin-top: 2rem;
+    }
+
+}
+
+
+
+
+/*---------------------------
     FOOTER SECTION
 ---------------------------*/
 .page-footer {
     padding: 2rem;
     position: relative;
 
+}
+
+/*---------------------------
+    MODULES
+---------------------------*/
+.btn-cta {
+    margin-top: 3rem;
+}
+
+.btn-contact {
+    display: inline-block;
+    margin: 2rem;
+    background: $black;
+
+    @include hover(background);
 }
 
 

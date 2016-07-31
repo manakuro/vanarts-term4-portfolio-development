@@ -2,7 +2,7 @@
 
 return array(
     // Title
-    'title' => 'Template',
+    'title' => 'Manato Kuroda',
 
     // Meta
     'meta' => array(
@@ -33,27 +33,28 @@ return array(
 
     // Social Media
     'social_media' => array(
-        'twitter' => array(
-            'name' => 'twitter',
-            'class' => 'fa fa-twitter',
-            'href' => '#'
-        ),
         'facebook' => array(
             'name' => 'facebook',
             'class' => 'fa fa-facebook-square',
-            'href' => '#'
+            'href' => 'https://www.facebook.com/mana.kuro.5'
         
         ),
-        'instagram' => array(
-            'name' => 'instagram',
-            'class' => 'fa fa-instagram',
-            'href' => '#'
+        'github' => array(
+            'name' => 'github',
+            'class' => 'fa fa-github-square',
+            'href' => 'https://github.com/manakuro'
+        
+        ),
+        'linkedin' => array(
+            'name' => 'github',
+            'class' => 'fa fa-linkedin-square',
+            'href' => 'https://jp.linkedin.com/in/manato-kuroda-3413b93b'
         
         ),
         'pinterest' => array(
             'name' => 'pinterest',
             'class' => 'fa fa-pinterest-square',
-            'href' => '#'
+            'href' => 'https://www.pinterest.com/a7108100/'
 
         )
 

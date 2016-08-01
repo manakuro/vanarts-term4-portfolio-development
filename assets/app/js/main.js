@@ -4,6 +4,7 @@
 const $ = global.jQuery = require('jquery');
 const _ = require('lodash');
 const Vivus = require('vivus');
+const Utility = require('./utility');
 
 const ParticleJs = require('particles.js');
 
@@ -29,7 +30,8 @@ $(() => {
     // after pre-loading transition
     $('.pre-loader-left').on("transitionend webkitTransitionEnd", () => {
         $('.hero').addClass('filled');
-        $('.pre-loader').hide();
+        $('body').addClass('preload-finished');
+        $('.pre-loader').hide();        
 
         // load particles
         particlesJS.load('particles-js', 'assets/json/particles.json', function() {
@@ -38,5 +40,7 @@ $(() => {
 
     });
 
+    // bind scroll animation event
+    Utility.scrollAnim();
 
 });

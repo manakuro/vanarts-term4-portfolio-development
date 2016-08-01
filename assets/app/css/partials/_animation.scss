@@ -29,6 +29,17 @@
 }
 
 /* Scroll Animation */
+.scroll-list {
+    visibility: hidden;
+}
+
+/* Fade in */
+.fade-in {
+    animation: fade-in 1s;
+    animation-fill-mode: both;
+    visibility: visible;
+}
+
 .scroll-list-hide {
     visibility: hidden;
 }

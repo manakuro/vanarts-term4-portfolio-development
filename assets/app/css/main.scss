@@ -26,12 +26,15 @@
 ----------------------------*/
 // header for home
 .page-header-home {
-    // margin-top: 10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 1rem 0;
+    background: $ex-light-grey;
 
     // navigation menu
-    .nav {
-        margin-top: 1rem;
-    }
 
     .nav-menu {
         display: flex;
@@ -49,9 +52,15 @@
 
 }
 
+// All pre loading event finished
+.preload-finished {
+    .page-header-home {
+        z-index: 999999;
+    }
+}
+
 // header for other pages
 .page-header {
-
 }
 
 .pre-loader-sec {

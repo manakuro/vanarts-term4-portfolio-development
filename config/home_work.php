@@ -9,7 +9,8 @@ return array(
         'class' => '',
         'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet suscipit lacus, et aliquet risus volutpat eu. Cras bibendum, purus sit amet porta venenatis, elit enim mattis tellus, a porta ligula odio et nulla',
         'img' => $imgPath.'freespirit_descktop.png',
-        'alt' => 'Free Spirit Hat Store'
+        'alt' => 'Free Spirit Hat Store',
+        'data_attr' => 'data-animation="fade-in"',
     ),
     array(
         'name' => 'world wide music',
@@ -17,7 +18,9 @@ return array(
         'class' => '',
         'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet suscipit lacus, et aliquet risus volutpat eu. Cras bibendum, purus sit amet porta venenatis, elit enim mattis tellus, a porta ligula odio et nulla',
         'img' => $imgPath.'wwm_decktop.png',
-        'alt' => 'world wide music'
+        'alt' => 'world wide music',
+        'data_attr' => 'data-animation="fade-in"',
+
     ),
     array(
         'name' => 'typography design',
@@ -25,7 +28,9 @@ return array(
         'class' => '',
         'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet suscipit lacus, et aliquet risus volutpat eu. Cras bibendum, purus sit amet porta venenatis, elit enim mattis tellus, a porta ligula odio et nulla',
         'img' => $imgPath.'term_project_speiman.png',
-        'alt' => 'typography design'
+        'alt' => 'typography design',
+        'data_attr' => 'data-animation="fade-in"',
+
     ),
     array(
         'name' => 'Yoshi hair salon studio',
@@ -33,7 +38,8 @@ return array(
         'class' => '',
         'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet suscipit lacus, et aliquet risus volutpat eu. Cras bibendum, purus sit amet porta venenatis, elit enim mattis tellus, a porta ligula odio et nulla',
         'img' => $imgPath.'yoshi_desktop.png',
-        'alt' => 'Yoshi hair salon studio'
+        'alt' => 'Yoshi hair salon studio',
+        'data_attr' => 'data-animation="fade-in"',
     ),
     array(
         'name' => 'ThinkW Web development company',
@@ -41,8 +47,7 @@ return array(
         'class' => '',
         'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet suscipit lacus, et aliquet risus volutpat eu. Cras bibendum, purus sit amet porta venenatis, elit enim mattis tellus, a porta ligula odio et nulla',
         'img' => $imgPath.'thinkw_decktop.png',
-        'alt' => 'ThinkW Web development company'
+        'alt' => 'ThinkW Web development company',
+        'data_attr' => 'data-animation="fade-in"',
     ),
-
-
 );

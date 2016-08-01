@@ -42,7 +42,7 @@
 
                 <?php foreach ($homeWork as $index => $val): ?>
 
-                <div class="columns span-l-12 home-work-li">
+                <div class="columns span-l-12 home-work-li scroll-list" <?php echo $val['data_attr']?>>
                     
                     <div class="row">
                         

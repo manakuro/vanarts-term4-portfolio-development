@@ -35,6 +35,7 @@
     "lightslider": "^1.1.5",
     "lodash": "^4.14.1",
     "lodash.assign": "^4.0.2",
+    "magnific-popup": "^1.1.0",
     "mo-js": "^0.147.4",
     "particles.js": "^2.0.0",
     "path": "^0.12.7",

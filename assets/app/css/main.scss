@@ -3,7 +3,7 @@
 ----------------------------*/
 @import 'partials/_config.scss';
 @import 'partials/_base.scss';
-@import 'partials/module.scss';
+@import 'partials/_module.scss';
 
 /* --------------------------
         LAYOUT
@@ -30,6 +30,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 999;
 
     padding: 1rem 0;
     background: $ex-light-grey;
@@ -43,11 +44,22 @@
 
     }
 
-    .nav-item a {
+    .nav-item {
         padding: 0 1rem;
+    }
+
+    .nav-item a {
         font-weight: 500;
         font-family: $heading-font;
         text-transform: uppercase;
+
+        &.active:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: .2rem;
+            background: $main-colour;
+        }
     }
 
 }
@@ -60,7 +72,8 @@
 }
 
 // header for other pages
-.page-header {
+.page-header-logo {
+    width: 80%;
 }
 
 .pre-loader-sec {
@@ -205,6 +218,10 @@
 }
 
 
+/*---------------------------
+    ABOUT PAGE
+---------------------------*/
+@import 'about.scss';
 
 
 /*---------------------------

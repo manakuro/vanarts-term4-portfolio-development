@@ -9,17 +9,19 @@ class Utility {
      * @param  [type] $navList [description]
      * @return [type]          [description]
      */
-    static function getNav($navList, $isHeader = true) {
+    static function getNav($navList, $options = array()) {
         $html = '';
+        $current = (!empty($options['current'])) ? $options['current'] : '';
 
         foreach($navList as $val) {
             // if ($val['only_member'] && empty($_SESSION['auth'])) continue;
             
             $class = (!empty($val['class'])) ? $val['class'] : '';
-            $html .= '<li class="nav-item '. $class .'"><a href="'. $val['href'] .'">'. $val['name'] .'</a>';
+            $active = ($current === $val['href']) ? 'active' : '';
+            $html .= '<li class="nav-item '. $class .'"><a href="'. $val['href'] .'" class="'. $active .'">'. $val['name'] .'</a>';
 
             // seb menu
-            if ($isHeader && !empty($val['sub_menu'])) {
+            if (!empty($options['is_header']) && !empty($val['sub_menu'])) {
                 $html .= '<i class="fa fa-angle-down nav-indicator" aria-hidden="true"></i>';
                 $html .= '<ul class="sub-menu">';
                 $html .= self::getNav($val['sub_menu']);

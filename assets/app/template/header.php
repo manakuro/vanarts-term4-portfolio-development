@@ -4,9 +4,10 @@
     $config = Config::get();
 
     // session_start();
-
     // create navigation menu html
-    $navHTML = Utility::getNav($config['nav']);
+    $navHTML = Utility::getNav($config['nav'], array(
+        'current' => CURRENT_PAGE.'.php'
+    ));
 
 ?>
 
@@ -62,6 +63,26 @@
         </header>
         <!-- /header for home page -->
         <?php else: ?>
+
+        <header class="page-header-home">
+
+            <div class="row">
+
+                <div class="columns span-l-2">
+                    <a href="index.php"><img src="assets/dist/img/logo.png" class="page-header-logo"></a>
+                </div>
+
+                <div class="columns span-l-3 offset-l-7">
+                    
+                    <nav class="nav">
+                        <ul class="nav-menu"><?php echo $navHTML; ?></ul>
+                    </nav>
+
+                </div>
+
+            </div>
+            
+        </header>
 
         <?php endif; ?>
        

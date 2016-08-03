@@ -13,20 +13,20 @@ return array(
     'nav' => array(
         'about' => array(
             'name' => 'About',
-            'href' => 'about.php',
+            'href' => 'about',
             'class' => '',
             'sub_menu' => array()
         ),
         'work' => array(
             'name' => 'Work',
             'class' => '',
-            'href' => 'work.php',
+            'href' => 'work',
             'sub_menu' => array()
         ),
         'contact' => array(
             'name' => 'Contact',
             'class' => '',
-            'href' => 'contact.php',
+            'href' => 'contact',
             'sub_menu' => array()
         )
     ),

@@ -2,12 +2,13 @@ RewriteEngine on
 
 # RewriteCond %{THE_REQUEST} ^.*/single_work\.php 
 # RewriteRule ^(.*)single_work.php$ /vanarts_portfolio/single_work.php?name=$1 [QSA]
-RewriteRule ^single_work/(.*)$ single_work.php?id=$1 [QSA]
+RewriteRule ^work/(.*)$ single_work.php?id=$1 [QSA]
 
 RewriteCond %{THE_REQUEST} ^.*/index\.php 
-RewriteRule ^(.*)index.php$ /vanarts_portfolio/$1 [R=301,L]
+RewriteRule ^(.*)index.php$ /$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 # Replace html with your file extension, eg: php, htm, asp
+

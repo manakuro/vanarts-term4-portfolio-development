@@ -23,15 +23,18 @@
         <!-- perevent google search robots from indexing -->
         <meta name="robots" content="noindex" /> 
 
+        <!-- set url URL_BASE is defined in bootstrap.php -->
+        <!-- <base href="<?php //echo URL_BASE; ?>"> -->
+
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS -->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,100italic,100|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="assets/dist/css/vendor.min.css">
+        <link rel="stylesheet" href="/assets/dist/css/vendor.min.css">
         
-        <link rel="stylesheet" href="assets/dist/css/main.css">
+        <link rel="stylesheet" href="/assets/dist/css/main.css">
 
     </head>
     <body>
@@ -64,7 +67,7 @@
             <div class="row">
 
                 <div class="columns span-l-2">
-                    <a href="index.php"><img src="assets/dist/img/logo.png" class="page-header-logo"></a>
+                    <a href="./index.php"><img src="/assets/dist/img/logo.png" class="page-header-logo"></a>
                 </div>
 
                 <div class="columns span-l-3 offset-l-7">

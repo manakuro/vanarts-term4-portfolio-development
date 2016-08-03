@@ -1,6 +1,6 @@
 <?php 
     include 'template/header.php';
-    $config = Config::get('work');
+    $work = Config::get('work');
 ?>
         
     <main class="page-main work">
@@ -9,7 +9,7 @@
             
             <div class="row">
 
-                <?php foreach($config['work'] as $val): ?>
+                <?php foreach($work as $val): ?>
 
                 <div class="columns span-l-4 work-li">
 

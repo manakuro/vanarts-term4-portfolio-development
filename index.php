@@ -34,7 +34,7 @@
 
     </div>
     
-    <main class="page-main">
+    <main class="page-main home">
 
         <section class="sec home-work">
             

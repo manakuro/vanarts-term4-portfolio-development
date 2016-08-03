@@ -46,7 +46,7 @@
 
         <?php if (IS_HOME): ?>
         <!-- header for home page -->
-        <header class="page-header-home">
+        <header class="page-header home">
 
             <div class="row">
 
@@ -64,7 +64,7 @@
         <!-- /header for home page -->
         <?php else: ?>
 
-        <header class="page-header-home">
+        <header class="page-header">
 
             <div class="row">
 

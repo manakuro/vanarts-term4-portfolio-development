@@ -24,8 +24,8 @@
 /* --------------------------
     HEADER
 ----------------------------*/
-// header for home
-.page-header-home {
+// header
+.page-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -36,12 +36,20 @@
     background: $ex-light-grey;
 
     // navigation menu
+    .nav {
+        margin-top: 1rem;
+    }
+    &.home {
+        .nav {
+            margin-top: 0;
+        }
+        
+    }
 
     .nav-menu {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     .nav-item {
@@ -66,7 +74,7 @@
 
 // All pre loading event finished
 .preload-finished {
-    .page-header-home {
+    .page-header {
         z-index: 999999;
     }
 }
@@ -106,6 +114,17 @@
     opacity: 0;
 
     transition: opacity .25s;
+}
+
+/* --------------------------
+    MAIN PAGE
+----------------------------*/
+.page-main {
+    margin-top: 8rem;
+
+    &.home {
+        margin-top: 0;
+    }
 }
 
 /*---------------------------
@@ -223,6 +242,10 @@
 ---------------------------*/
 @import 'about.scss';
 
+/*---------------------------
+    WORK PAGE
+---------------------------*/
+@import 'work.scss';
 
 /*---------------------------
     FOOTER SECTION

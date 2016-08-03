@@ -20,10 +20,10 @@
 </footer>
 
         <!-- Vendors -->    
-        <script src="assets/dist/js/vendor.min.js"></script>
+        <script src="/assets/dist/js/vendor.min.js"></script>
 
         <!-- JavaScript -->
-        <script src="assets/dist/js/bundle.js"></script>
+        <script src="/assets/dist/js/bundle.js"></script>
 
     </body>
 </html>

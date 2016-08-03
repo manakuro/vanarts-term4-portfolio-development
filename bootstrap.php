@@ -13,7 +13,8 @@ define('IS_HOME', basename($_SERVER["PHP_SELF"]) === 'index.php');
 // define host url
 $url  = empty($_SERVER["HTTPS"]) ? "http://" : "https://";
 $url .= $_SERVER["HTTP_HOST"];
-define('BASE_URL', $url);
+define('URL_DOMAIN', $url);
+define('URL_BASE', $url.'/vanarts_portfolio/');
 
 date_default_timezone_set('Canada/Pacific');
 

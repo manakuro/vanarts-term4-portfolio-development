@@ -20,12 +20,12 @@
 </footer>
 
         <!-- Vendors -->    
-        <!-- build:js assets/dist/js/vendor.min.js -->
+        <!-- build:js /assets/dist/js/vendor.min.js -->
         <script src="../js/vendors/modernizr-2.8.3.min.js"></script>
         <!-- endbuild -->
 
         <!-- JavaScript -->
-        <script src="assets/dist/js/bundle.js"></script>
+        <script src="/assets/dist/js/bundle.js"></script>
 
     </body>
 </html>

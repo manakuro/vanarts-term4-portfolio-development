@@ -1,6 +1,6 @@
 <?php
 
-$imgPath = 'assets/dist/img/about/';
+$imgPath = '/assets/dist/img/about/';
 
 return array(
     'video' => array(

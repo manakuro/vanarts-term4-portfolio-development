@@ -130,16 +130,14 @@ gulp.task('useref', function(){
     var phpFilter = $.filter(['**/*.php'], { restore: true });
 
     var stream = gulp.src(config.html.app)
-        .pipe($.useref({
-            base: '../'
-        }))
+        .pipe($.useref())
         .pipe(cssFilter)
         .pipe($.cssnano())
-        .pipe(gulp.dest(config.css.dist))
+        .pipe(gulp.dest('../'))
         .pipe(cssFilter.restore)
         .pipe(jsFilter)
         .pipe($.uglify())
-        .pipe(gulp.dest(config.js.dist))
+        .pipe(gulp.dest('../'))
         .pipe(jsFilter.restore)
         .pipe(phpFilter)
         .pipe(gulp.dest(config.html.dist));

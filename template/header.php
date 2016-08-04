@@ -6,7 +6,7 @@
     // session_start();
     // create navigation menu html
     $navHTML = Utility::getNav($config['nav'], array(
-        'current' => CURRENT_PAGE.'.php'
+        'current' => CURRENT_PAGE
     ));
 
 ?>

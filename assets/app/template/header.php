@@ -41,6 +41,7 @@
         
         <link rel="stylesheet" href="/assets/dist/css/main.css">
 
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB36SDClfnYJ4Yhw8iMUxXI92l_ZF2ip0c"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -72,7 +73,7 @@
             <div class="row">
 
                 <div class="columns span-l-2">
-                    <a href="./index.php"><img src="/assets/dist/img/logo.png" class="page-header-logo"></a>
+                    <a href="/index.php"><img src="/assets/dist/img/logo.png" class="page-header-logo"></a>
                 </div>
 
                 <div class="columns span-l-3 offset-l-7">

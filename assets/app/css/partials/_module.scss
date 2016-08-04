@@ -1,55 +1,4 @@
 /* --------------------------
-        MODULES
-----------------------------*/
-@mixin page-header-input-style {
-    height: 2.5rem;
-    padding: .5rem;
-}
-
-@mixin hover($ele, $child: '') {
-    @if $child == '' {
-        transition: #{$ele} .25s;
-
-        &:hover {
-            #{$ele}: $main-colour;
-        }
-
-    } @else {
-        #{$child} {
-            transition: #{$ele} .25s;
-        }
-
-        &:hover #{$child} {
-            #{$ele}: $main-colour;
-        }
-    }
-
-}
-
-@mixin focus-input {
-    &:focus {
-        outline: none;
-    }
-}
-
-// button style
-@mixin btn-style($width) {
-    display: block;
-    padding: .5em;
-    font-family: $heading-font;
-    font-weight: 500;
-    font-size: 1em;
-    color: $white;
-    background-color: $main-colour;
-    border: none;
-    text-transform: uppercase;
-    text-align: center;
-    width: $width;
-
-    transition: border-color .5s;
-}
-
-/* --------------------------
         SECTION
 ----------------------------*/
 .sec {
@@ -421,43 +370,6 @@
 /* --------------------------
     AUDIO & VIDEO
 ----------------------------*/
-@mixin playing-style($width: .1em) {
-    background: $main-colour;
-    border: $width solid $main-colour;
-}
-
-@mixin play-icon-wrapper($icon) {
-    position: relative;
-    padding: 0;
-
-    &:hover #{$icon} {
-        @include playing-style(.1em);
-    }
-
-    img {
-        // -webkit-transition: opacity .25s;
-        //         transition: opacity .25s;
-    }
-
-    &:hover img {
-        opacity: .8;
-    }
-
-    // while playing 
-    &.playing {
-
-        #{$icon} {
-            @include playing-style(.1em);
-        }
-
-        img {
-            opacity: .8;
-        }
-
-    }
-
-}
-
 %play-icon {
     position: absolute;
     top: 50%;

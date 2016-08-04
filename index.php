@@ -47,7 +47,7 @@
                     
                     <div class="row">
                         
-                        <div class="columns span-l-4 <?php if ($count%2 !== 0) echo 'fr'; ?>">
+                        <div class="columns span-l-4 <?php if ($count % 2 !== 0) echo 'fr'; ?>">
                             
                             <h3 class="home-work-li-heading"><?php echo $val['home']['name']?></h3>
 
@@ -63,9 +63,8 @@
 
                     </div>
 
-
                 </div>
-                <?php $count++; ?>
+                <?php $count++;?>
                 <?php endif; ?>
                 <?php endforeach; ?>
 

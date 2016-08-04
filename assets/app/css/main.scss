@@ -3,7 +3,7 @@
 ----------------------------*/
 @import 'partials/_config.scss';
 @import 'partials/_base.scss';
-@import 'partials/_module.scss';
+@import 'partials/module.scss';
 
 /* --------------------------
         LAYOUT
@@ -251,6 +251,11 @@
     SINGLE WORK PAGE
 ---------------------------*/
 @import 'single_work.scss';
+
+/*---------------------------
+    CONTACT PAGE
+---------------------------*/
+@import 'contact.scss';
 
 /*---------------------------
     FOOTER SECTION

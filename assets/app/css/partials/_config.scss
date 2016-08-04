@@ -31,16 +31,7 @@ $error: #FF0000;
 $body-font: 'Roboto', 'Lato';
 $heading-font: 'Kelson';
 
-/*---------------------------
-    MEDIA QUERY
----------------------------*/
-@import '_mediaquery.scss';
 
-
-/*---------------------------
-    Grid System
----------------------------*/
-@import '_grid.scss';
 
 
 /*---------------------------
@@ -73,7 +64,131 @@ $heading-font: 'Kelson';
     @return floor((( $pxWidth / $parentPxWidth ) * 10000% )) / 100;
 }
 
+/*---------------------------
+    GRID SYSTEM
+---------------------------*/
 
 
+/*---------------------------
+    MEDIA QUERY
+---------------------------*/
+$bp-m: 48em;    // tablet  / 1em = 16px, 48em = 768px
+$bp-l: 55em;    // desktop / 1em = 16px, 55em = 880px
+$bp-ll: 70em;   // desktop / 1em = 16px, 70em = 1120px
+$bp-xl: 80em;   // desktop / 1em = 16px, 80em = 1280px
+
+@mixin respond-to($media) {
+    @if $media == s {
+        @media only screen and (max-width: $bp-m) { @content; }
+    } @else if $media == m {
+        @media only screen and (min-width: $bp-m) { @content; }
+    } @else if $media == l {
+        @media only screen and (min-width: $bp-l) { @content; }
+    } @else if $media == ll {
+        @media only screen and (min-width: $bp-ll) { @content; }
+    } @else if $media == xl {
+        @media only screen and (min-width: $bp-xl) { @content; }
+    }
+
+    @if $media == s-m {
+        @media only screen and (max-width: $bp-m) { @content; }
+    }
+
+    @if $media == m-l {
+        @media only screen and (min-width: $bp-m) and (max-width: $bp-l) { @content; }
+    } @else if $media == l-xl {
+        @media only screen and (min-width: $bp-l) { @content; }
+    }
+}
+
+/* --------------------------
+        MODULES
+----------------------------*/
+@mixin page-header-input-style {
+    height: 2.5rem;
+    padding: .5rem;
+}
+
+@mixin hover($ele, $child: '') {
+    @if $child == '' {
+        transition: #{$ele} .25s;
+
+        &:hover {
+            #{$ele}: $main-colour;
+        }
+
+    } @else {
+        #{$child} {
+            transition: #{$ele} .25s;
+        }
+
+        &:hover #{$child} {
+            #{$ele}: $main-colour;
+        }
+    }
+
+}
+
+@mixin focus-input {
+    &:focus {
+        outline: none;
+    }
+}
+
+// button style
+@mixin btn-style($width) {
+    display: block;
+    padding: .5em;
+    font-family: $heading-font;
+    font-weight: 500;
+    font-size: 1em;
+    color: $white;
+    background-color: $main-colour;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: $width;
+
+    transition: border-color .5s;
+}
 
 
+/* --------------------------
+    AUDIO & VIDEO
+----------------------------*/
+@mixin playing-style($width: .1em) {
+    background: $main-colour;
+    border: $width solid $main-colour;
+}
+
+@mixin play-icon-wrapper($icon) {
+    position: relative;
+    padding: 0;
+
+    &:hover #{$icon} {
+        @include playing-style(.1em);
+    }
+
+    img {
+        // -webkit-transition: opacity .25s;
+        //         transition: opacity .25s;
+    }
+
+    &:hover img {
+        opacity: .8;
+    }
+
+    // while playing 
+    &.playing {
+
+        #{$icon} {
+            @include playing-style(.1em);
+        }
+
+        img {
+            opacity: .8;
+        }
+
+    }
+
+}

@@ -7,6 +7,7 @@ const Vivus = require('vivus');
 const Utility = require('./utility');
 const ParticleJs = require('particles.js');
 require('magnific-popup');
+const GoogleMap = require('./google_map');
 
 // variables
 const config = {};
@@ -129,51 +130,13 @@ $(() => {
                 }
             );
         });
+    }
 
-
-        // $skillLists.hover( 
-
-        // // mouse enter
-        // (e) => {
-        //     const bg = $(e.target).data('bg');
-        //     const cl = $(e.target).data('cl');
-
-        //     $(e.target).css({
-        //         backgroundColor: bg,
-        //         color: cl,
-        //     });
-        // },
-
-        // // mouse leave
-        // (e) => {
-        //     const bg = $(e.target).data('origin-bg');
-        //     const cl = $(e.target).data('origin-cl');
-
-        //     $skillLists.css({
-        //         backgroundColor: bg,
-        //         color: cl,
-        //     });
-
-        // })
-        // .children().mouseover((e) => {
-        //     const bg = $(e.target).parents('.about-skills-li-inner').data('bg');
-        //     const cl = $(e.target).parents('.about-skills-li-inner').data('cl');
-
-        //     $(e.target).parents('.about-skills-li-inner').css({
-        //         backgroundColor: bg,
-        //         color: cl,
-        //     });
-        // })
-        // .mouseleave((e) => {
-        //     const bg = $(e.target).parents('.about-skills-li-inner').data('origin-bg');
-        //     const cl = $(e.target).parents('.about-skills-li-inner').data('origin-cl');
-
-        //      $skillLists.css({
-        //         backgroundColor: bg,
-        //         color: cl,
-        //     });
-        // });
-
+    /*---------------------------
+        CONTACT PAGE
+    ---------------------------*/
+    if ($('#map').length > 0) {
+        GoogleMap.load();
     }
 
 });

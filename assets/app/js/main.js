@@ -42,6 +42,7 @@ $(() => {
             });
         };
 
+        $('html').css('overflow', 'hidden');
         const vivus = new Vivus('svg-logo', opt, () => {
             $('.hero').addClass('svg-finished');
         });

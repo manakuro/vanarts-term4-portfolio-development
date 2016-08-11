@@ -32,7 +32,13 @@
 
         </div>
 
+        <div class="skip-inner">
+            <span class="skip js-skip">Skip</span>
+        </div>
+
     </div>
+
+
     
     <main class="page-main home">
 

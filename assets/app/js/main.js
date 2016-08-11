@@ -29,21 +29,32 @@ $(() => {
             animTimingFunction: Vivus.EASE
         };
 
-        new Vivus('svg-logo', opt, () => {
-            $('.hero').addClass('svg-finished');
-        });
-
-        // after pre-loading transition
-        $('.pre-loader-left').on("transitionend webkitTransitionEnd", () => {
+        const afterPreLoading = () => {
             $('.hero').addClass('filled');
             $('body').addClass('preload-finished');
-            $('.pre-loader').hide();        
+            $('.pre-loader').hide();
+            $('.skip-inner').hide();
+            $('html').css('overflow', 'auto');
 
             // load particles
             particlesJS.load('particles-js', 'assets/json/particles.json', function() {
                 console.log('callback - particles.js config loaded');
             });
+        };
 
+        const vivus = new Vivus('svg-logo', opt, () => {
+            $('.hero').addClass('svg-finished');
+        });
+
+        // after pre-loading transition
+        $('.pre-loader-left').on("transitionend webkitTransitionEnd", () => {
+            afterPreLoading();
+        });
+
+        // skip pre loading animation
+        $('.js-skip').click((e) => {
+            vivus.finish();
+            $('.hero').addClass('svg-finished');
         });
     }
 
